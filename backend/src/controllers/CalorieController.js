@@ -38,3 +38,22 @@ export const createCalorieEntry = async (req, res) => {
             res.status(500).json({message: error.message});
         }
     }
+
+    export const updateCalorieEntry = async (req,res) => {
+        try{
+            const { id } = req.params;
+            const { description, calories } = req.body;
+
+            const updatedEntry = await CalorieEntry.findByIdAndUpdate(
+                id,
+                {description, calories },
+                {new: true},
+            )
+
+            if(!updatedEntry) {
+                return res.status(404).json({message: 'Entry could not be fouund'});
+            }
+        } catch(error) {
+            res.status(400).json({message: error.message})
+        }
+    }

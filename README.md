@@ -42,11 +42,16 @@ The Calorie Tracker App is a full-stack web application that allows users to mon
 ```
   cd frontend
   ```
-2. Install dependecies
+
+2. Create an .env.local file with the following content:
+   ```
+   NEXT_PUBLIC_API_URL=http://localhost:4000
+   
+3. Install dependecies
 ```
   npm install
 ```
-3. Start the frontend development server
+4. Start the frontend development server
 ```
   npm run dev
 ```

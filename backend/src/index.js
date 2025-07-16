@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import CalorieRoutes from './api/CalorieRoutes.js';
-import AuthRoutes from './routes/AuthRoutes.js';
+import AuthRoutes from './routes/authRoutes.js';
 
 dotenv.config();
 

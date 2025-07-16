@@ -34,6 +34,7 @@ export default function CaloriesPage() {
                 await API.put(`/calories/${editingId}`, form);
                 toast.success("Entry updated successfully");
                 setEditingId(null);
+                await fetchEntries();
             } else {
             await API.post('/calories', form);
             toast.success("Entry added successfully");
@@ -54,7 +55,7 @@ export default function CaloriesPage() {
             toast.success("Entry deleted successfully");
             if(editingId === id)
             setEditingId(null);
-            fetchEntries();
+            await fetchEntries();
         } catch(error) {
             toast.error("Error deleting entry");
         }

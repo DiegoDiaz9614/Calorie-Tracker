@@ -20,27 +20,33 @@ The Calorie Tracker App is a full-stack web application that allows users to mon
 ### Backend Setup
 
 1. Navigate to the backend folder:
-   ```bash
+   ```
    cd backend
-   
-2. Install Dependecies
+   ```
+2. Install Dependecies:
+   ```
    npm install
-
-3. Create and .env file with the following content
+   ```
+3. Create an .env file with the following content:
+```
   PORT=5000
   MONGO_URI=your-mongodb-connection-string
   JWT_SECRET=your-secret-key
-
-4. Start the Backend Server
+```
+4. Start the Backend Server:
+```
   npm run dev
-
+```
 ### Frontend Setup
 1. Navigate to the frontend folder
+```
   cd frontend
-
+  ```
 2. Install dependecies
+```
   npm install
-
+```
 3. Start the frontend development server
+```
   npm run dev
-
+```

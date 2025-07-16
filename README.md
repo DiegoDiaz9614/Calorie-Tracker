@@ -1,0 +1,46 @@
+# Calorie Tracker App
+
+## Project Title
+Calorie Tracker App
+
+## Project Description
+The Calorie Tracker App is a full-stack web application that allows users to monitor and manage their daily calorie intake. It provides secure user authentication and CRUD (Create, Read, Update, Delete) functionality for calorie entries. Only authenticated users can access and modify calorie data.
+
+**Key Features:**
+- User Registration and Login with JWT Authentication
+- Add, Edit, Delete, and View Calorie Entries
+- Protected Routes for Logged-In Users Only
+- Responsive User Interface with Tailwind CSS
+- Toast Notifications for User Feedback
+
+---
+
+## Setup Instructions
+
+### Backend Setup
+
+1. Navigate to the backend folder:
+   ```bash
+   cd backend
+   
+2. Install Dependecies
+   npm install
+
+3. Create and .env file with the following content
+  PORT=5000
+  MONGO_URI=your-mongodb-connection-string
+  JWT_SECRET=your-secret-key
+
+4. Start the Backend Server
+  npm run dev
+
+### Frontend Setup
+1. Navigate to the frontend folder
+  cd frontend
+
+2. Install dependecies
+  npm install
+
+3. Start the frontend development server
+  npm run dev
+

@@ -1,4 +1,5 @@
 import express from 'express';
+import { authenticateToken } from '../middleware/authMiddleware.js';
 import {
     getAllCalories,
     createCalorieEntry,
@@ -8,9 +9,9 @@ import {
 
 const router = express.Router();
 
-router.get('/', getAllCalories);
-router.post('/', createCalorieEntry);
-router.delete('/:id', deleteCalorieEntry);
-router.put('/:id', updateCalorieEntry);
+router.get('/', authenticateToken, getAllCalories);
+router.post('/', authenticateToken, createCalorieEntry);
+router.delete('/:id', authenticateToken, deleteCalorieEntry);
+router.put('/:id', authenticateToken, updateCalorieEntry);
 
 export default router;

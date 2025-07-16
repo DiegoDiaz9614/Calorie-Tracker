@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import CalorieRoutes from './api/CalorieRoutes.js';
+import AuthRoutes from './routes/AuthRoutes.js';
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use('/api/calories', CalorieRoutes);
+app.use('/api/auth', AuthRoutes);
 
 mongoose
 .connect(process.env.MONGO_URI)

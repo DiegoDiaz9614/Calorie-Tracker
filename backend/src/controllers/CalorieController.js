@@ -53,6 +53,7 @@ export const createCalorieEntry = async (req, res) => {
             if(!updatedEntry) {
                 return res.status(404).json({message: 'Entry could not be fouund'});
             }
+            res.json(updatedEntry)
         } catch(error) {
             res.status(400).json({message: error.message})
         }
